@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Islandery Music</title>
+  <meta name="description" content="Islandery Music">
+  <meta name="author" content="Johan Egneblad">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/player.css">
+
+</head>
+
+<body>
+  <img src="media/islandery.png" class="header" />
+
+  <h2>Introduction</h2>
+  <p>
+    This is the <i>Islandery</i> music archive. You can play and download any of the songs below. All songs are released under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a>. You can reach me at johan-at-egneblad.se. Unless otherwise stated, the copyright is held by me, Johan Egneblad.
+  </p>
+
+  <p>
+   Below is the music player. Clicking it toggles playback. It will stay close. 
+  </p>
+  
+  <div id="playerpanel">
+    <div class="unselectable">
+      <span id="playerstatus">Paused</span>
+      <span id="playertitle">No song</span>
+      <span id="playerduration">?/?</span>
+      <span id="playernext">Next</span>
+    </div>
+    <audio>
+	<source type="audio/mp3" >
+    </audio>
+  </div>
+
+  <template id="track-template">
+    <style>
+      :host > div {
+	  cursor: pointer;
+	  margin: 4pt;
+	  margin-left: 8pt;
+      }
+
+      :host > div > .active {
+	  color: #18ff94;
+      }
+
+      :host > div > #title {
+	  background-image: url('media/icons/music_white.svg');
+	  background-repeat: no-repeat;
+	  background-size: 28pt 28pt;
+	  padding-left: 36pt;
+	  font-family: times;
+	  font-size: 36pt;
+	  font-style: italic;
+      }
+      
+      :host > div > #title.active {
+	  background-image: url('media/icons/music_green.svg');
+      }
+      :host > .unselectable {
+      	-webkit-user-select: none; /* Safari */        
+      	-moz-user-select: none; /* Firefox */
+      	-ms-user-select: none; /* IE10+/Edge */
+      	user-select: none; /* Standard */
+      }
+
+      :host > div > span.download {
+	  margin-left: 4pt;
+      }
+
+      :host > div > span > a.download {
+	  text-transform: uppercase;
+	  color: #999;
+	  text-decoration: none;
+	  background-color: #555;
+	  padding: 2pt;
+      }
+      
+    </style>
+    <div id="container" class="unselectable">
+      <span id="title">?</span>
+    </div>
+  </template>
+
+  <h2>Highlights</h2>
+  <x-track title="Cozy Daze" proxy="cozydaze.mp3"></x-track>
+  <x-track title="Lunk" proxy="lunk.mp3" flac="lunk.flac"></x-track>
+  <x-track title="Fade" proxy="fade_master.mp3" flac="fade_master.flac"></x-track>
+  <x-track title="Waltz in E Minor (or perhaps E Major)" proxy="vals.mp3" flac="vals.flac" pdf="waltz_in_g_major.pdf"></x-track>
+
+  <h2>Stafetten</h2>
+  <p>
+    <i>Stafetten</i> is an ongoing combined art and music project by Natalia Chuvashova and Islandery. It started 2018 and the idea is a kind of ping pong whisper game where each art piece inspires a song, which in turn inspires a new piece of art. 
+  </p>
+
+  <p>All artwork under this section is &copy;Natalia Chuvashova 2018-2019.</p>
+
+  <img src="media/stafetten1.jpg" width="100%" title="Initial Picture" />
+  <x-track title="First Musical Response" proxy="stafetten01_slutmix2_comp.mp3" flac="stafetten01_slutmix2_comp.flac"></x-track>
+  <img src="media/stafetten2.jpg" width="100%" title="First Graphical Response" />
+  <x-track title="Second Musical Response" proxy="stafetten02_slutmix2.mp3" flac="stafetten02_slutmix2.flac"></x-track>
+  <img src="media/stafetten3.jpg" width="100%" title="Second Graphical Response" />
+  <x-track title="Third Musical Response" proxy="stafetten3.mp3"></x-track>
+
+  <iframe width="732" height="412" src="https://www.youtube.com/embed/TrokgS7xurQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <x-track title="Fourth Musical Response" proxy="stafetten4.mp3" flac="stafetten4.flac" pdf="stafetten4.pdf"></x-track>
+  
+  <h2>Levande Syntetisk Sylt</h2>
+  <p>
+    Single-take impros on the synth rack.
+  </p>
+  <x-track title="Levande Syntetisk Sylt 1" proxy="lss001.flac" flac="lss001.flac"></x-track>
+  <x-track title="Levande Syntetisk Sylt 2" proxy="lss002.flac" flac="lss002.flac"></x-track>
+  <x-track title="Levande Syntetisk Sylt 3" proxy="lss003.flac" flac="lss003.flac"></x-track>
+  <x-track title="Levande Syntetisk Sylt 4" proxy="lss004.flac" flac="lss004.flac"></x-track>
+  
+  <script src="js/player.js"></script>
+</body>
+</html>

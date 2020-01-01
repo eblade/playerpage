@@ -1,0 +1,41 @@
+body {
+    background-color: #363636;
+    color: #999;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-left: 7pt solid #25919b;
+}
+
+img.header {
+    width: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-size: 162pt;
+    font-family: times;
+    font-style: italic;
+}
+
+h2 {
+    color: #3dbf98;
+    font-size: 48pt;
+    font-family: times;
+    font-style: italic;
+    padding-left: 8pt;
+    background-image: url('../media/stripes.png');
+    background-repeat: repeat-x;
+    background-size: .03em;
+    background-position-y: .8em;
+}
+
+p {
+    font-size: 24pt;
+    font-family: times;
+    margin-left: 16pt;
+}
+
+a {
+    color: inherit;
+}

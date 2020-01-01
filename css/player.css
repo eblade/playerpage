@@ -1,0 +1,51 @@
+#playerpanel {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    font-family: times;
+    font-size: 36pt;
+    font-style: italic;
+    background-color: #999;
+    color: #363636;
+    padding: 4pt;
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: 4pt solid #363636;
+    height: 38pt;
+    cursor: pointer;
+}
+
+.unselectable {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+#playerstatus {
+    color: #444;
+    font-family: monospaced;
+    font-size: .3em;
+    text-transform: uppercase;
+}
+
+#playertitle {
+    color: #111;
+}
+
+#playerduration {
+    color: #444;
+    font-family: monospaced;
+    font-size: .3em;
+}
+
+#playerstatus.active {
+    background-image: url('../media/icons/play_green.svg');
+}
+
+#playernext {
+    color: #222;
+    font-family: monospaced;
+    font-size: .3em;
+    text-transform: uppercase;
+}
